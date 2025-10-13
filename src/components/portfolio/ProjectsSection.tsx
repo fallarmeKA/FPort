@@ -5,82 +5,71 @@ import { ExternalLink, Github, Star, GitFork } from 'lucide-react';
 const projects = [
   {
     id: 1,
-    title: 'TaskFlow Pro',
-    description: 'A comprehensive project management platform with real-time collaboration, advanced analytics, and team productivity insights.',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&q=80',
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.io', 'Redis'],
-    githubUrl: 'https://github.com/yourusername/taskflow-pro',
-    liveUrl: 'https://taskflow-pro.vercel.app',
-    stars: 234,
-    forks: 45,
+    title: 'Portfolio Website',
+    description: "This portfolio website showcases skills and projects in a clean, modern design. Built with HTML, CSS and Javascript, it features responsive layouts and interactive elements.",
+    image: '/images/Port.png',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/fallarmeKA/Free-Template-Portfolio',
+    liveUrl: 'https://free-template-portfolio-xi.vercel.app/',
     accomplishments: [
-      'Increased team productivity by 40%',
-      'Real-time collaboration for 1000+ users',
-      'Advanced analytics dashboard'
+      'Developed a Fully Responsive and Interactive Portfolio Website',
+      'Integrated Dynamic Contact Form with Email Functionality',
+      'Showcased Projects and Skills with an Intuitive UI/UX Design'
     ]
   },
   {
     id: 2,
-    title: 'EcoTracker',
-    description: 'Mobile app for tracking personal carbon footprint with gamification elements and community challenges.',
-    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
-    technologies: ['React Native', 'Firebase', 'TensorFlow', 'Chart.js'],
-    githubUrl: 'https://github.com/yourusername/ecotracker',
-    liveUrl: 'https://ecotracker-app.netlify.app',
-    stars: 189,
-    forks: 32,
+    title: 'E-commerce Dashboard',
+    description: 'A comprehensive dashboard for e-commerce store owners to manage products, view sales analytics, and handle customer orders. Features a clean UI with data visualization components.',
+    image: '/images/proj.jpg',
+    technologies: ["React", "Redux", "Chart.js", "Material UI"],
+    githubUrl: 'https://github.com/bridge360-ph/Intern_projmgt1',
+    liveUrl: 'https://intern-projmgt-main.vercel.app/dashboard',
     accomplishments: [
-      '50K+ active users',
-      'AI-powered recommendations',
-      'Community of eco-warriors'
+      'Built a responsive and Dynamic Admin Interface',
+      'Integrated real-time data visualization',
+      'Implemented secure authentication and Role-based Access Control'
     ]
   },
   {
     id: 3,
-    title: 'CodeMentor AI',
-    description: 'AI-powered code review and mentoring platform that helps developers improve their coding skills.',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80',
-    technologies: ['Next.js', 'OpenAI API', 'Prisma', 'Stripe', 'Vercel'],
-    githubUrl: 'https://github.com/yourusername/codementor-ai',
-    liveUrl: 'https://codementor-ai.com',
-    stars: 456,
-    forks: 78,
+    title: 'BaryoWork Application',
+    description: 'A BaryoWork Application is to streamline local job search for residents in the Philippines. It connects job seekers with local employers, providing a platform for posting and applying to jobs within their community.',
+    image: '/images/Baryo.png',
+    technologies: ["React Native", "MongoDB", "Redux"],
+    githubUrl: 'https://github.com/fallarmeKA/BaryoWorkFront',
+    liveUrl: 'https://www.figma.com/proto/Ehh1s269c2iBtOB9taFlps/BaryoWork-App-(temp-name)?node-id=7-13&p=f&t=nEGGNZBpJf2F866W-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=460%3A64&show-proto-sidebar=1',
     accomplishments: [
-      'AI code analysis engine',
-      'Personalized learning paths',
-      'Integration with 10+ IDEs'
+      'Developed a user-friendly Job Portal',
+      'Integrated job posting and Application Features',
+      'Implemented location-based Job Filtering'
     ]
   },
   {
     id: 4,
-    title: 'FinanceFlow',
-    description: 'Personal finance management with automated categorization, budget tracking, and investment insights.',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80',
-    technologies: ['Vue.js', 'Python', 'Django', 'Plaid API', 'D3.js'],
-    githubUrl: 'https://github.com/yourusername/financeflow',
-    liveUrl: 'https://financeflow.app',
-    stars: 312,
-    forks: 56,
+    title: 'MemoRecall Web App',
+    description: 'The development of a Senior Friendly Web Application for holistic intervention of early memory lapses in geriatric individuals.',
+    image: '/images/memo.jpg',
+    technologies: ["Vite", "React", "Tailwind CSS", "TypeScript", "MongoDB"],
+    liveUrl: 'https://memorecall-v3.vercel.app/?fbclid=IwZXh0bgNhZW0CMTEAAR095nOnBidRaKpm2ytk1yxG1QCnQQi86y5RnSSEdJ38GTwpSwUA04J0kbE_aem__TQC0ZJizodmRscQIGBTjA"',
     accomplishments: [
-      'Bank-level security',
-      'Smart categorization AI',
-      'Investment portfolio tracking'
+      'Developed a Senior-Friendly Web Application',
+      'Implemented cognitive exercise modules and reminders',
+      'Designed a holistic intervention platform'
     ]
   },
   {
     id: 5,
-    title: 'DevPortfolio',
-    description: 'Modern portfolio website template with dark/light mode, animations, and responsive design.',
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
-    githubUrl: 'https://github.com/yourusername/dev-portfolio',
-    liveUrl: 'https://dev-portfolio-template.vercel.app',
-    stars: 128,
-    forks: 24,
+    title: 'Nike-Ecommerce Website',
+    description: 'Nike E-commerce Website is a modern e-commerce platform for Nike products, featuring a sleek design, user-friendly interface, and secure payment options.',
+    image: '/images/Nike.png',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    githubUrl: 'https://github.com/fallarmeKA/Nike-ECOM',
+    liveUrl: 'https://nike-ecom-sigma.vercel.app/',
     accomplishments: [
-      'Fully responsive design',
-      'Smooth animations',
-      'SEO optimized'
+      'Developed a fully functional e-commerce platform',
+      'Designed a sleek and responsive user interface',
+      'Integrated dynamic product data and payment processing'
     ]
   },
   {
@@ -153,14 +142,6 @@ export default function ProjectsSection() {
                   }}
                   className="absolute top-4 right-4 flex space-x-2"
                 >
-                  <div className="flex items-center space-x-1 bg-black/70 rounded-full px-3 py-1 text-white text-sm">
-                    <Star className="w-4 h-4" />
-                    <span>{project.stars}</span>
-                  </div>
-                  <div className="flex items-center space-x-1 bg-black/70 rounded-full px-3 py-1 text-white text-sm">
-                    <GitFork className="w-4 h-4" />
-                    <span>{project.forks}</span>
-                  </div>
                 </motion.div>
               </div>
 

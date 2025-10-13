@@ -77,7 +77,7 @@ export default function AboutTimelineSection() {
               <div className="relative">
                 <div className="w-48 h-48 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+                    src="/images/ProfPic.jpg"
                     alt="Kyle Fallarme"
                     className="w-full h-full object-cover"
                   />

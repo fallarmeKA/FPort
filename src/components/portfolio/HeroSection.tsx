@@ -139,7 +139,7 @@ export default function HeroSection() {
               className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30"
             >
               <img
-                src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kyle"
+                src="/images/ProfPic.jpg"
                 alt="Kyle Fallarme"
                 className="w-full h-full object-cover"
               />
