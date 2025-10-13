@@ -8,7 +8,7 @@ import ProjectsSection from './portfolio/ProjectsSection';
 import ThemeToggle from './portfolio/ThemeToggle';
 import ContactSection from './portfolio/ContactSection';
 import ServicesSection from './portfolio/ServicesSection';
-import TestimonialsSection from './portfolio/TestimonialsSection';
+//import TestimonialsSection from './portfolio/TestimonialsSection';
 import AboutTimelineSection from './portfolio/AboutTimelineSection';
 import ThemeCustomizer from './portfolio/ThemeCustomizer';
 import ResumeSection from './portfolio/ResumeSection';

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
 
 export default function ContactSection() {
   const contactInfo = [
@@ -35,7 +35,7 @@ export default function ContactSection() {
       href: 'https://linkedin.com/in/yourusername'
     },
     {
-      icon: Twitter,
+      icon: Instagram,
       label: 'Twitter',
       href: 'https://twitter.com/yourusername'
     }

@@ -4,13 +4,13 @@ import { Progress } from '@/components/ui/progress';
 
 const skills = [
   // Web Development
-  { name: 'HTML', level: 95, category: 'Web Development' },
-  { name: 'CSS', level: 95, category: 'Web Development' },
+  { name: 'HTML', level: 90, category: 'Web Development' },
+  { name: 'CSS', level: 90, category: 'Web Development' },
   { name: 'JavaScript', level: 90, category: 'Web Development' },
   { name: 'React Native', level: 85, category: 'Web Development' },
-  { name: 'React.js', level: 92, category: 'Web Development' },
-  { name: 'Node.js', level: 85, category: 'Web Development' },
-  { name: 'Express.js', level: 85, category: 'Web Development' },
+  { name: 'React.js', level: 90, category: 'Web Development' },
+  { name: 'Node.js', level: 80, category: 'Web Development' },
+  { name: 'Express.js', level: 80, category: 'Web Development' },
   
   // Databases
   { name: 'SQL Server', level: 80, category: 'Databases' },

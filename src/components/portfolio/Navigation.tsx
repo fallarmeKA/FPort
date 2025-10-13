@@ -8,7 +8,7 @@ const navItems = [
   { name: 'Design Work', href: '#design' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Testimonials', href: '#testimonials' },
+  //{ name: 'Testimonials', href: '#testimonials' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -21,7 +21,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['hero', 'about', 'services', 'design', 'skills', 'projects', 'testimonials', 'contact'];
+      const sections = ['hero', 'about', 'services', 'design', 'skills', 'projects', 'contact']; //removed testimonials
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
