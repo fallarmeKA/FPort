@@ -77,8 +77,8 @@ const projects = [
     title: 'MyPanel',
     description: 'is your all-in-one life companion—perfect for jotting down notes, keeping track of expenses, and staying on top of your tasks. Simple, clean, and distraction-free, it helps you focus on what truly matters every day.',
     image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80',
-    technologies: ['React', 'Python', 'FastAPI', 'OpenAI', 'MongoDB'],
-    githubUrl: 'https://github.com/yourusername/chatbot-builder',
+    technologies: ['React', 'JavaScript', 'CSS', 'TypeScript', 'Vite'],
+    githubUrl: 'https://github.com/fallarmeKA/LifeBoard',
     liveUrl: 'https://chatbot-builder.io',
     accomplishments: [
       'Created a personal workspace app for managing notes, expenses, and to-dos',
