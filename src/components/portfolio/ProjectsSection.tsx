@@ -79,7 +79,7 @@ const projects = [
     image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80',
     technologies: ['React', 'JavaScript', 'CSS', 'TypeScript', 'Vite'],
     githubUrl: 'https://github.com/fallarmeKA/LifeBoard',
-    liveUrl: 'https://chatbot-builder.io',
+    liveUrl: 'https://lb-blond.vercel.app/',
     accomplishments: [
       'Created a personal workspace app for managing notes, expenses, and to-dos',
       'A clean, intuitive UI for easy daily organization',
