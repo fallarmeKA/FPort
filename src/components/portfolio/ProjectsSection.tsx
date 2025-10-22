@@ -74,18 +74,16 @@ const projects = [
   },
   {
     id: 6,
-    title: 'ChatBot Builder',
-    description: 'No-code platform for building intelligent chatbots with natural language processing capabilities.',
+    title: 'MyPanel',
+    description: 'is your all-in-one life companion—perfect for jotting down notes, keeping track of expenses, and staying on top of your tasks. Simple, clean, and distraction-free, it helps you focus on what truly matters every day.',
     image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80',
     technologies: ['React', 'Python', 'FastAPI', 'OpenAI', 'MongoDB'],
     githubUrl: 'https://github.com/yourusername/chatbot-builder',
     liveUrl: 'https://chatbot-builder.io',
-    stars: 267,
-    forks: 41,
     accomplishments: [
-      'Drag-and-drop interface',
-      'Multi-language support',
-      '10K+ chatbots created'
+      'Created a personal workspace app for managing notes, expenses, and to-dos',
+      'A clean, intuitive UI for easy daily organization',
+      'Enhanced productivity by integrating task tracking and expense monitoring features'
     ]
   }
 ];
