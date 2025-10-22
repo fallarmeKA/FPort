@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const contactInfo = [
     {
       icon: Mail,
@@ -27,7 +33,7 @@ export default function ContactSection() {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/yourusername'
+      href: 'https://github.com/fallarmeKA'
     },
     {
       icon: Linkedin,
@@ -36,15 +42,33 @@ export default function ContactSection() {
     },
     {
       icon: Instagram,
-      label: 'Twitter',
-      href: 'https://twitter.com/yourusername'
+      label: 'Instagram',
+      href: 'https://www.instagram.com/_kyleft/'
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Firebase integration will be added here
-    console.log('Form submitted - Firebase integration needed');
+    if (!formRef.current) return;
+
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.sendForm(
+        'YOUR_SERVICE_ID', // Get this from EmailJS dashboard
+        'YOUR_TEMPLATE_ID', // Get this from EmailJS dashboard
+        formRef.current,
+        'YOUR_PUBLIC_KEY' // Get this from EmailJS dashboard
+      );
+      setSubmitStatus('success');
+      formRef.current.reset();
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -136,11 +160,12 @@ export default function ContactSection() {
             className="bg-card p-8 rounded-2xl border border-border"
           >
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
+                    name="user_name"
                     type="text"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
@@ -150,6 +175,7 @@ export default function ContactSection() {
                 <div>
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
+                    name="user_email"
                     type="email"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
@@ -161,6 +187,7 @@ export default function ContactSection() {
               <div>
                 <label className="block text-sm font-medium mb-2">Subject</label>
                 <input
+                  name="subject"
                   type="text"
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
@@ -171,6 +198,7 @@ export default function ContactSection() {
               <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea
+                  name="message"
                   rows={5}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
@@ -182,10 +210,18 @@ export default function ContactSection() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
+                disabled={isSubmitting}
+                className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
+
+              {submitStatus === 'success' && (
+                <p className="text-green-600 text-center">Message sent successfully!</p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
+              )}
             </form>
           </motion.div>
         </div>

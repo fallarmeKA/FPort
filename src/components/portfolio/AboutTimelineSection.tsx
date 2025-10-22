@@ -4,22 +4,15 @@ import { Calendar, MapPin, Award, Briefcase, Code, GraduationCap } from 'lucide-
 const timelineEvents = [
   {
     id: 1,
-    year: '2020',
-    title: 'Started Programming Journey',
-    icon: Code,
-    description: 'Began learning web development with HTML, CSS, and JavaScript.',
-    color: 'bg-blue-500'
-  },
-  {
-    id: 2,
     year: '2021-2024',
-    title: 'Computer Science Education',
+    title: 'Information Technology Education',
     icon: GraduationCap,
-    description: 'Pursuing Computer Science degree with focus on full-stack development.',
+    location: 'Makati City',
+    description: 'Pursuing Information Technology degree with focus on Website development and UI/UX Design',
     color: 'bg-green-500'
   },
   {
-    id: 3,
+    id: 2,
     year: 'Nov 2023 - Apr 2024',
     title: 'Freelance Social Media Content Creator',
     icon: Briefcase,
@@ -28,7 +21,7 @@ const timelineEvents = [
     color: 'bg-purple-500'
   },
   {
-    id: 4,
+    id: 3,
     year: 'Mar - Jul 2024',
     title: 'Product Development Intern',
     icon: Briefcase,
@@ -37,12 +30,12 @@ const timelineEvents = [
     color: 'bg-orange-500'
   },
   {
-    id: 5,
+    id: 4,
     year: '2024',
     title: 'Full-Stack Developer',
     icon: Award,
-    description: 'Specialized in React.js, MERN stack, and Firebase.',
-    color: 'bg-primary'
+    description: 'Specialized in MERN stack, and Firebase.',
+    color: 'bg-blue-500'
   }
 ];
 
@@ -109,7 +102,7 @@ export default function AboutTimelineSection() {
                   <h4 className="font-semibold">Experience</h4>
                 </div>
                 <p className="text-muted-foreground ml-13">2+ Years</p>
-                <p className="text-sm text-muted-foreground ml-13">Full-stack development</p>
+                <p className="text-sm text-muted-foreground ml-13">Website Development</p>
               </div>
 
               <div className="bg-card rounded-xl p-5 border border-border">
