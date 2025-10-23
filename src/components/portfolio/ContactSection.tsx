@@ -10,9 +10,9 @@ export default function ContactSection() {
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => {
-    // initialize EmailJS once on mount (replace with your public key if different)
     try {
-      emailjs.init('HOPKqqfF9murxqcN4');
+      // ✅ Updated to your latest public key
+      emailjs.init('CFSn8C3WDp_OdPeL5');
     } catch (err) {
       console.warn('EmailJS init failed:', err);
     }
@@ -65,27 +65,27 @@ export default function ContactSection() {
     setSubmitStatus('idle');
     setSubmitError(null);
 
-    // gather form values and send as template params (avoids relying on form field names matching template exactly)
     const formData = new FormData(formRef.current);
     const templateParams = {
-      to_email: 'kalfallarme08@gmail.com', // ensure recipient is provided (or set recipient in EmailJS template/dashboard)
+      to_email: 'kalfallarme08@gmail.com',
       from_name: (formData.get('user_name') as string) || '',
-      reply_to: (formData.get('user_email') as string) || '',
+      from_email: (formData.get('user_email') as string) || '',
       subject: (formData.get('subject') as string) || '',
       message: (formData.get('message') as string) || ''
     };
 
     try {
       const res = await emailjs.send(
-        'service_gz08uzb',   // verify in EmailJS dashboard
-        'template_bqaxbqs',  // verify in EmailJS dashboard
-        templateParams       // pass explicit params
+        'service_p7u7tri', // your current Gmail service ID
+        'template_bqaxbqs', // your active EmailJS template
+        templateParams,
+        'CFSn8C3WDp_OdPeL5' // your EmailJS public key
       );
-      console.info('EmailJS success:', res);
+      console.info('✅ EmailJS success:', res);
       setSubmitStatus('success');
       formRef.current.reset();
     } catch (error: any) {
-      console.error('EmailJS error:', error);
+      console.error('❌ EmailJS error:', error);
       const message = error?.text || error?.message || JSON.stringify(error) || 'Unknown error';
       setSubmitError(message);
       setSubmitStatus('error');
@@ -240,7 +240,9 @@ export default function ContactSection() {
               </motion.button>
 
               {submitStatus === 'success' && (
-                <p className="text-green-600 text-center" role="status" aria-live="polite">Message sent successfully!</p>
+                <p className="text-green-600 text-center" role="status" aria-live="polite">
+                  Message sent successfully!
+                </p>
               )}
               {submitStatus === 'error' && (
                 <p className="text-red-600 text-center" role="alert" aria-live="assertive">
