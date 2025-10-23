@@ -8,7 +8,7 @@ const designProjects = [
     title: 'E-commerce Dashboard',
     description: 'Modern admin interface with advanced analytics and user management',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80',
-    figmaUrl: '#',
+    figmaUrl: 'https://www.figma.com/design/1FQtU0wOtrdzp6BJMM15az/Untitled?node-id=0-1&t=n4o1CXpM2kf2quKv-1',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Chart.js'],
     category: 'Web App'
   },

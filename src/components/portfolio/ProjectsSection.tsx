@@ -19,7 +19,7 @@ const projects = [
   },
   {
     id: 2,
-    title: 'E-commerce Dashboard',
+    title: 'Project Management Dashboard',
     description: 'A comprehensive dashboard for e-commerce store owners to manage products, view sales analytics, and handle customer orders. Features a clean UI with data visualization components.',
     image: '/images/proj.jpg',
     technologies: ["React", "Redux", "Chart.js", "Material UI"],
@@ -76,7 +76,7 @@ const projects = [
     id: 6,
     title: 'MyPanel',
     description: 'is your all-in-one life companion—perfect for jotting down notes, keeping track of expenses, and staying on top of your tasks. Simple, clean, and distraction-free, it helps you focus on what truly matters every day.',
-    image: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80',
+    image: '/images/mypanel.jpg',
     technologies: ['React', 'JavaScript', 'CSS', 'TypeScript', 'Vite'],
     githubUrl: 'https://github.com/fallarmeKA/LifeBoard',
     liveUrl: 'https://lb-blond.vercel.app/',
