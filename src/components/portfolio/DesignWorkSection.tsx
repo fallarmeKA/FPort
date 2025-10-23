@@ -5,29 +5,29 @@ import { ExternalLink, Eye, X } from 'lucide-react';
 const designProjects = [
   {
     id: 1,
-    title: 'E-commerce Dashboard',
-    description: 'Modern admin interface with advanced analytics and user management',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
-    figmaUrl: 'https://www.figma.com/design/1FQtU0wOtrdzp6BJMM15az/Untitled?node-id=0-1&t=n4o1CXpM2kf2quKv-1',
-    technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+    title: 'E-commerce: World Peas',
+    description: 'Minimalist design for seamless shopping experience',
+    image: '/images/WP.jpg',
+    figmaUrl: 'https://www.figma.com/proto/1FQtU0wOtrdzp6BJMM15az/World-Peas?node-id=1-19&t=77bJEHCK4wJM5YwB-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
+    technologies: ['Figma', 'Prototyping'],
     category: 'Web App'
   },
   {
     id: 2,
     title: 'Gotcha App',
-    description: 'Intuitive financial management with biometric security',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80',
+    description: 'Gotcha App is a fun, swipe-based clothing marketplace where users connect, chat, and securely purchase items they love.',
+    image: '/images/GA.jpg',
     figmaUrl: 'https://www.figma.com/proto/Gv7WCtZ4rFqRemj29g9UTk/PROTOTYPE-APPDEV?node-id=14-788&t=0SSTX5Y6VeDIfvpl-1',
-    technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+    technologies: ['Figma', 'Prototyping'],
     category: 'Mobile App'
   },
   {
     id: 3,
     title: 'BaryoWork Mobile App',
-    description: 'Conversion-optimized design with interactive elements',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80',
+    description: 'BaryoWork is to streamline local job search for barangay residents in the Philippines',
+    image: 'images/BW.jpg',
     figmaUrl: 'https://www.figma.com/proto/Ehh1s269c2iBtOB9taFlps/BaryoWork-App--temp-name-?page-id=0%3A1&node-id=7-13&starting-point-node-id=7%3A13&t=x0L4Hnx94AmGYMf9-1',
-    technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+    technologies: ['Figma', 'Prototyping'],
     category: 'Mobile App'
   },
   {
@@ -36,7 +36,7 @@ const designProjects = [
     description: 'Comprehensive component library and style guide',
     image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80',
     figmaUrl: '#',
-    technologies: ['Figma', 'UI/UX Design', 'Prototyping'],
+    technologies: ['Figma', 'Prototyping'],
     category: 'Design System'
   }
 ];

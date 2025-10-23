@@ -38,7 +38,7 @@ export default function ContactSection() {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername'
+      href: 'https://www.linkedin.com/in/kyle-l-fallarme-628318150/'
     },
     {
       icon: Instagram,
