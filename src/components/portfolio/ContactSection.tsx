@@ -68,7 +68,7 @@ export default function ContactSection() {
     try {
       const res = await emailjs.sendForm(
         'service_uv4wzv7',    // verify in EmailJS dashboard
-        'template_k0ruv2f',   // verify in EmailJS dashboard
+        'template_bqaxbqs',   // verify in EmailJS dashboard
         formRef.current       // init() already called above, no public key passed here
       );
       console.info('EmailJS success:', res);
