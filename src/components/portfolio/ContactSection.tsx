@@ -1,12 +1,22 @@
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from 'lucide-react';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // initialize EmailJS once on mount (replace with your public key if different)
+    try {
+      emailjs.init('HOPKqqfF9murxqcN4');
+    } catch (err) {
+      console.warn('EmailJS init failed:', err);
+    }
+  }, []);
 
   const contactInfo = [
     {
@@ -53,18 +63,21 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
+    setSubmitError(null);
 
     try {
-      await emailjs.sendForm(
-        'service_uv4wzv7', // Get this from EmailJS dashboard
-        'template_k0ruv2f', // Get this from EmailJS dashboard
-        formRef.current,
-        'HOPKqqfF9murxqcN4' // Get this from EmailJS dashboard
+      const res = await emailjs.sendForm(
+        'service_uv4wzv7',    // verify in EmailJS dashboard
+        'template_k0ruv2f',   // verify in EmailJS dashboard
+        formRef.current       // init() already called above, no public key passed here
       );
+      console.info('EmailJS success:', res);
       setSubmitStatus('success');
       formRef.current.reset();
-    } catch (error) {
-      console.error(error);
+    } catch (error: any) {
+      console.error('EmailJS error:', error);
+      const message = error?.text || error?.message || JSON.stringify(error) || 'Unknown error';
+      setSubmitError(message);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -217,10 +230,12 @@ export default function ContactSection() {
               </motion.button>
 
               {submitStatus === 'success' && (
-                <p className="text-green-600 text-center">Message sent successfully!</p>
+                <p className="text-green-600 text-center" role="status" aria-live="polite">Message sent successfully!</p>
               )}
               {submitStatus === 'error' && (
-                <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
+                <p className="text-red-600 text-center" role="alert" aria-live="assertive">
+                  Failed to send message. {submitError ? `Error: ${submitError}` : 'Please try again.'}
+                </p>
               )}
             </form>
           </motion.div>
