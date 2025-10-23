@@ -57,7 +57,7 @@ export default function ContactSection() {
     try {
       await emailjs.sendForm(
         'service_uv4wzv7', // Get this from EmailJS dashboard
-        'template_33evlka', // Get this from EmailJS dashboard
+        'template_k0ruv2f', // Get this from EmailJS dashboard
         formRef.current,
         'HOPKqqfF9murxqcN4' // Get this from EmailJS dashboard
       );
