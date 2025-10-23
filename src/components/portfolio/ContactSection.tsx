@@ -56,10 +56,10 @@ export default function ContactSection() {
 
     try {
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Get this from EmailJS dashboard
-        'YOUR_TEMPLATE_ID', // Get this from EmailJS dashboard
+        'service_7b6nq6e', // Get this from EmailJS dashboard
+        'template_0ukrwu3', // Get this from EmailJS dashboard
         formRef.current,
-        'YOUR_PUBLIC_KEY' // Get this from EmailJS dashboard
+        'HOPKqqfF9murxqcN4' // Get this from EmailJS dashboard
       );
       setSubmitStatus('success');
       formRef.current.reset();
