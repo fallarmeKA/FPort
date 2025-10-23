@@ -65,11 +65,21 @@ export default function ContactSection() {
     setSubmitStatus('idle');
     setSubmitError(null);
 
+    // gather form values and send as template params (avoids relying on form field names matching template exactly)
+    const formData = new FormData(formRef.current);
+    const templateParams = {
+      to_email: 'kalfallarme08@gmail.com', // ensure recipient is provided (or set recipient in EmailJS template/dashboard)
+      from_name: (formData.get('user_name') as string) || '',
+      reply_to: (formData.get('user_email') as string) || '',
+      subject: (formData.get('subject') as string) || '',
+      message: (formData.get('message') as string) || ''
+    };
+
     try {
-      const res = await emailjs.sendForm(
-        'service_uv4wzv7',    // verify in EmailJS dashboard
-        'template_bqaxbqs',   // verify in EmailJS dashboard
-        formRef.current       // init() already called above, no public key passed here
+      const res = await emailjs.send(
+        'service_uv4wzv7',   // verify in EmailJS dashboard
+        'template_bqaxbqs',  // verify in EmailJS dashboard
+        templateParams       // pass explicit params
       );
       console.info('EmailJS success:', res);
       setSubmitStatus('success');
