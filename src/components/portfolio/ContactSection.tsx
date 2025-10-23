@@ -7,16 +7,6 @@ export default function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [submitError, setSubmitError] = useState<string | null>(null);
-
-  useEffect(() => {
-    try {
-      // ✅ Updated to your latest public key
-      emailjs.init('HOPKqqfF9murxqcN4');
-    } catch (err) {
-      console.warn('EmailJS init failed:', err);
-    }
-  }, []);
 
   const contactInfo = [
     {
@@ -63,31 +53,18 @@ export default function ContactSection() {
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
-    setSubmitError(null);
-
-    const formData = new FormData(formRef.current);
-    const templateParams = {
-      to_email: 'kalfallarme08@gmail.com',
-      from_name: (formData.get('user_name') as string) || '',
-      from_email: (formData.get('user_email') as string) || '',
-      subject: (formData.get('subject') as string) || '',
-      message: (formData.get('message') as string) || ''
-    };
 
     try {
-      const res = await emailjs.send(
-        'service_p7u7tri', // your current Gmail service ID
-        'template_bqaxbqs', // your active EmailJS template
-        templateParams,
-        'CFSn8C3WDp_OdPeL5' // your EmailJS public key
+      await emailjs.sendForm(
+        'service_gz08uzb', // from EmailJS
+        'template_bqaxbqs', // from EmailJS
+        formRef.current,
+        'HOPKqqfF9murxqcN4' // from EmailJS
       );
-      console.info('✅ EmailJS success:', res);
       setSubmitStatus('success');
       formRef.current.reset();
-    } catch (error: any) {
-      console.error('❌ EmailJS error:', error);
-      const message = error?.text || error?.message || JSON.stringify(error) || 'Unknown error';
-      setSubmitError(message);
+    } catch (error) {
+      console.error(error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -188,7 +165,7 @@ export default function ContactSection() {
                 <div>
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input
-                    name="user_name"
+                    name="user_name"  // Important for EmailJS
                     type="text"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
@@ -198,7 +175,7 @@ export default function ContactSection() {
                 <div>
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input
-                    name="user_email"
+                    name="user_email"  // Important for EmailJS
                     type="email"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
@@ -208,20 +185,9 @@ export default function ContactSection() {
               </div>
               
               <div>
-                <label className="block text-sm font-medium mb-2">Subject</label>
-                <input
-                  name="subject"
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors"
-                  placeholder="Project inquiry"
-                />
-              </div>
-              
-              <div>
                 <label className="block text-sm font-medium mb-2">Message</label>
                 <textarea
-                  name="message"
+                  name="message"  // Important for EmailJS
                   rows={5}
                   required
                   className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors resize-none"
@@ -240,14 +206,10 @@ export default function ContactSection() {
               </motion.button>
 
               {submitStatus === 'success' && (
-                <p className="text-green-600 text-center" role="status" aria-live="polite">
-                  Message sent successfully!
-                </p>
+                <p className="text-green-600">Message sent successfully!</p>
               )}
               {submitStatus === 'error' && (
-                <p className="text-red-600 text-center" role="alert" aria-live="assertive">
-                  Failed to send message. {submitError ? `Error: ${submitError}` : 'Please try again.'}
-                </p>
+                <p className="text-red-600">Failed to send message. Please try again.</p>
               )}
             </form>
           </motion.div>
