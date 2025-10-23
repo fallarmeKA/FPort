@@ -12,7 +12,7 @@ export default function ContactSection() {
   useEffect(() => {
     try {
       // ✅ Updated to your latest public key
-      emailjs.init('CFSn8C3WDp_OdPeL5');
+      emailjs.init('HOPKqqfF9murxqcN4');
     } catch (err) {
       console.warn('EmailJS init failed:', err);
     }
