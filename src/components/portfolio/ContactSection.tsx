@@ -77,7 +77,7 @@ export default function ContactSection() {
 
     try {
       const res = await emailjs.send(
-        'service_uv4wzv7',   // verify in EmailJS dashboard
+        'service_gz08uzb',   // verify in EmailJS dashboard
         'template_bqaxbqs',  // verify in EmailJS dashboard
         templateParams       // pass explicit params
       );
