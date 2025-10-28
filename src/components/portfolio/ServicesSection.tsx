@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code, Palette, Smartphone, Globe } from 'lucide-react';
+import { Code, Palette, Smartphone } from 'lucide-react';
 
 const services = [
   {
@@ -20,12 +20,6 @@ const services = [
     description: 'Cross-platform mobile apps with React Native.',
     features: ['iOS & Android Apps', 'Push Notifications', 'Offline Functionality', 'App Store Deployment']
   },
-  {
-    icon: Globe,
-    title: 'E-commerce Solutions',
-    description: 'Complete online stores with payment processing and inventory management.',
-    features: ['Shopify/WooCommerce', 'Payment Gateways', 'Inventory Management', 'Analytics Dashboard']
-  }
 ];
 
 export default function ServicesSection() {
@@ -45,7 +39,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}

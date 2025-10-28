@@ -14,8 +14,8 @@ const skills = [
   
   // Databases
   { name: 'SQL Server', level: 60, category: 'Databases' },
-  { name: 'Firebase', level: 80, category: 'Databases' },
-  { name: 'MongoDB', level: 80, category: 'Databases' },
+  { name: 'Firebase', level: 60, category: 'Databases' },
+  { name: 'MongoDB', level: 60, category: 'Databases' },
   
   // Programming Languages
   { name: 'Java', level: 70, category: 'Programming' },
@@ -26,8 +26,8 @@ const skills = [
   // Design & Web Platforms
   { name: 'Canva', level: 70, category: 'Design' },
   { name: 'Figma', level: 80, category: 'Design' },
-  { name: 'WordPress', level: 70, category: 'Design' },
-  { name: 'Wix', level: 70, category: 'Design' },
+  { name: 'WordPress', level: 60, category: 'Design' },
+  { name: 'Wix', level: 60, category: 'Design' },
 ];
 
 const skillCategories = ['Web Development', 'Databases', 'Programming', 'Tools', 'Design'];

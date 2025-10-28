@@ -8,7 +8,7 @@ const timelineEvents = [
     title: 'Information Technology Education',
     icon: GraduationCap,
     location: 'Makati City',
-    description: 'Pursuing Information Technology degree with focus on Website development and UI/UX Design',
+    description: 'Pursude Information Technology degree with focus on Website development and UI/UX Design',
     color: 'bg-green-500'
   },
   {
@@ -31,10 +31,10 @@ const timelineEvents = [
   },
   {
     id: 4,
-    year: '2024',
-    title: 'Full-Stack Developer',
+    year: 'Jun – Oct 2025',
+    title: 'Freelance Front-end Developer & UI/UX Designer',
     icon: Award,
-    description: 'Specialized in MERN stack, and Firebase.',
+    description: 'Upwork – Development & IT',
     color: 'bg-blue-500'
   }
 ];
@@ -91,7 +91,6 @@ export default function AboutTimelineSection() {
                   <h4 className="font-semibold">Based in</h4>
                 </div>
                 <p className="text-muted-foreground ml-13">Philippines</p>
-                <p className="text-sm text-muted-foreground ml-13">Available worldwide</p>
               </div>
 
               <div className="bg-card rounded-xl p-5 border border-border">
@@ -101,7 +100,7 @@ export default function AboutTimelineSection() {
                   </div>
                   <h4 className="font-semibold">Experience</h4>
                 </div>
-                <p className="text-muted-foreground ml-13">2+ Years</p>
+                <p className="text-muted-foreground ml-13">1 Year</p>
                 <p className="text-sm text-muted-foreground ml-13">Website Development</p>
               </div>
 
@@ -113,7 +112,7 @@ export default function AboutTimelineSection() {
                   <h4 className="font-semibold">Focus</h4>
                 </div>
                 <p className="text-muted-foreground ml-13">MERN Stack</p>
-                <p className="text-sm text-muted-foreground ml-13">React.js & Firebase</p>
+                <p className="text-sm text-muted-foreground ml-13">React & Firebase</p>
               </div>
             </div>
           </motion.div>

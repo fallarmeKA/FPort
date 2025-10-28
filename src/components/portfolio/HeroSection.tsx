@@ -71,7 +71,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
-              <span className="block text-foreground">Full-Stack</span>
+              <span className="block text-foreground">Front-End</span>
               <motion.span
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
