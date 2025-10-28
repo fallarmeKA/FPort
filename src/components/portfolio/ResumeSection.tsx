@@ -4,15 +4,15 @@ import { Download, FileText, Eye } from 'lucide-react';
 export default function ResumeSection() {
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/resume-kyle-fallarme.pdf'; 
-    link.download = 'Kyle-Fallarme-Resume.pdf';
+    link.href = '\FALLARME - RESUME.pdf'; 
+    link.download = '\FALLARME - RESUME.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
   const handleViewResume = () => {
-    window.open('/resume-kyle-fallarme.pdf', '_blank');
+    window.open('\FALLARME - RESUME.pdf', '_blank');
   };
 
   return (
