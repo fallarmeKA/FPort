@@ -4,30 +4,30 @@ import { Progress } from '@/components/ui/progress';
 
 const skills = [
   // Web Development
-  { name: 'HTML', level: 90, category: 'Web Development' },
-  { name: 'CSS', level: 90, category: 'Web Development' },
-  { name: 'JavaScript', level: 90, category: 'Web Development' },
-  { name: 'React Native', level: 85, category: 'Web Development' },
-  { name: 'React.js', level: 90, category: 'Web Development' },
-  { name: 'Node.js', level: 80, category: 'Web Development' },
-  { name: 'Express.js', level: 80, category: 'Web Development' },
+  { name: 'HTML', level: 70, category: 'Web Development' },
+  { name: 'CSS', level: 70, category: 'Web Development' },
+  { name: 'JavaScript', level: 70, category: 'Web Development' },
+  { name: 'React Native', level: 70, category: 'Web Development' },
+  { name: 'React.js', level: 70, category: 'Web Development' },
+  { name: 'Node.js', level: 70, category: 'Web Development' },
+  { name: 'Express.js', level: 60, category: 'Web Development' },
   
   // Databases
-  { name: 'SQL Server', level: 80, category: 'Databases' },
-  { name: 'Firebase', level: 88, category: 'Databases' },
-  { name: 'MongoDB', level: 85, category: 'Databases' },
+  { name: 'SQL Server', level: 60, category: 'Databases' },
+  { name: 'Firebase', level: 80, category: 'Databases' },
+  { name: 'MongoDB', level: 80, category: 'Databases' },
   
   // Programming Languages
-  { name: 'Java', level: 75, category: 'Programming' },
+  { name: 'Java', level: 70, category: 'Programming' },
   
   // Development Tools
-  { name: 'Postman', level: 85, category: 'Tools' },
+  { name: 'Postman', level: 70, category: 'Tools' },
   
   // Design & Web Platforms
-  { name: 'Canva', level: 90, category: 'Design' },
-  { name: 'Figma', level: 88, category: 'Design' },
-  { name: 'WordPress', level: 82, category: 'Design' },
-  { name: 'Wix', level: 80, category: 'Design' },
+  { name: 'Canva', level: 70, category: 'Design' },
+  { name: 'Figma', level: 80, category: 'Design' },
+  { name: 'WordPress', level: 70, category: 'Design' },
+  { name: 'Wix', level: 70, category: 'Design' },
 ];
 
 const skillCategories = ['Web Development', 'Databases', 'Programming', 'Tools', 'Design'];
