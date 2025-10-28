@@ -3,10 +3,8 @@ import { Download, FileText, Eye } from 'lucide-react';
 
 export default function ResumeSection() {
   const handleDownloadResume = () => {
-    // In a real implementation, this would generate or serve a PDF
-    // For now, we'll simulate the download
     const link = document.createElement('a');
-    link.href = '/resume-kyle-fallarme.pdf'; // You would put your actual resume file here
+    link.href = '/resume-kyle-fallarme.pdf'; 
     link.download = 'Kyle-Fallarme-Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -14,7 +12,6 @@ export default function ResumeSection() {
   };
 
   const handleViewResume = () => {
-    // Open resume in new tab for viewing
     window.open('/resume-kyle-fallarme.pdf', '_blank');
   };
 
@@ -58,7 +55,7 @@ export default function ResumeSection() {
       </div>
       
       <p className="text-sm text-muted-foreground mt-4">
-        Last updated: December 2023
+        Last updated: September 2025
       </p>
     </motion.div>
   );
