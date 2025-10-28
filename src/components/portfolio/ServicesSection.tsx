@@ -6,7 +6,7 @@ const services = [
     icon: Code,
     title: 'Web Development',
     description: 'Full-stack web applications using React, Node.js, and modern frameworks.',
-    features: ['React/Next.js Apps', 'API Development', 'Database Design', 'Responsive Design']
+    features: ['React/Next.js Apps', 'Database Design', 'Responsive Design']
   },
   {
     icon: Palette,
@@ -18,7 +18,7 @@ const services = [
     icon: Smartphone,
     title: 'Mobile Development',
     description: 'Cross-platform mobile apps with React Native.',
-    features: ['iOS & Android Apps', 'Push Notifications', 'Offline Functionality', 'App Store Deployment']
+    features: ['iOS & Android Apps', 'Push Notifications', 'Offline Functionality']
   },
 ];
 
