@@ -14,12 +14,12 @@ const designProjects = [
   },
   {
     id: 2,
-    title: 'Gotcha App',
-    description: 'Gotcha App is a fun, swipe-based clothing marketplace where users connect, chat, and securely purchase items they love.',
-    image: '/images/GA.jpg',
-    figmaUrl: 'https://www.figma.com/proto/Gv7WCtZ4rFqRemj29g9UTk/PROTOTYPE-APPDEV?node-id=14-788&t=0SSTX5Y6VeDIfvpl-1',
-    technologies: ['Figma', 'Prototyping'],
-    category: 'Mobile App'
+    title: 'Cooksy',
+    description: 'Cooksy makes discovering, saving, and sharing your favorite recipes simple and fun.',
+    image: '/images/CK.jpg',
+    figmaUrl: 'https://cooksy-xi.vercel.app/',
+    technologies: ['Wesbite', 'Prototyping'],
+    category: 'Web app'
   },
   {
     id: 3,
@@ -32,12 +32,12 @@ const designProjects = [
   },
   {
     id: 4,
-    title: 'Design System',
-    description: 'Comprehensive component library and style guide',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?w=600&q=80',
-    figmaUrl: '#',
+    title: 'Gotcha App',
+    description: 'Gotcha App is a fun, swipe-based clothing marketplace where users connect, chat, and securely purchase items they love.',
+    image: '/images/GA.jpg',
+    figmaUrl: 'https://www.figma.com/proto/Gv7WCtZ4rFqRemj29g9UTk/PROTOTYPE-APPDEV?node-id=14-788&t=0SSTX5Y6VeDIfvpl-1',
     technologies: ['Figma', 'Prototyping'],
-    category: 'Design System'
+    category: 'Mobile App'
   }
 ];
 
