@@ -5,29 +5,29 @@ import { Progress } from '@/components/ui/progress';
 const skills = [
   // Web Development
   { name: 'HTML', level: 70, category: 'Web Development' },
-  { name: 'CSS', level: 70, category: 'Web Development' },
-  { name: 'JavaScript', level: 70, category: 'Web Development' },
-  { name: 'React Native', level: 70, category: 'Web Development' },
+  { name: 'CSS', level: 60, category: 'Web Development' },
+  { name: 'JavaScript', level: 60, category: 'Web Development' },
+  { name: 'React Native', level: 60, category: 'Web Development' },
   { name: 'React.js', level: 70, category: 'Web Development' },
   { name: 'Node.js', level: 70, category: 'Web Development' },
   { name: 'Express.js', level: 60, category: 'Web Development' },
   
   // Databases
-  { name: 'SQL Server', level: 60, category: 'Databases' },
-  { name: 'Firebase', level: 60, category: 'Databases' },
-  { name: 'MongoDB', level: 60, category: 'Databases' },
+  { name: 'SQL Server', level: 50, category: 'Databases' },
+  { name: 'Firebase', level: 50, category: 'Databases' },
+  { name: 'MongoDB', level: 50, category: 'Databases' },
   
   // Programming Languages
   { name: 'Java', level: 70, category: 'Programming' },
   
   // Development Tools
-  { name: 'Postman', level: 70, category: 'Tools' },
+  { name: 'Postman', level: 60, category: 'Tools' },
   
   // Design & Web Platforms
   { name: 'Canva', level: 70, category: 'Design' },
-  { name: 'Figma', level: 80, category: 'Design' },
-  { name: 'WordPress', level: 60, category: 'Design' },
-  { name: 'Wix', level: 60, category: 'Design' },
+  { name: 'Figma', level: 70, category: 'Design' },
+  { name: 'WordPress', level: 50, category: 'Design' },
+  { name: 'Wix', level: 50, category: 'Design' },
 ];
 
 const skillCategories = ['Web Development', 'Databases', 'Programming', 'Tools', 'Design'];
